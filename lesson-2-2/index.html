@@ -19,25 +19,29 @@
     <div id="vue-app">
         <!-- data rendering -->
         <div class="container">
-            <h2>Title : {{title}}</h2>
-            <h4>Sub Title: {{subTitle}}</h4>
-            <p><b> {{demo}} :</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione perspiciatis molestias tempore deserunt quam placeat beatae laborum, dicta hic quaerat autem. Ullam itaque quo ab illum dolore nemo saepe! Eos.</p>
-           <h3>hellow : {{greet()}}</h3>
-           <!-- function render -->
-           <p>String :{{name}}</p>
-           <p>Function : {{time('afternone')}}</p>
-           <p>Number :{{id}}</p>
-           <p>Boolean :{{recommend}} </p>
-           <p>Array:{{tasks}}</p>
-           <p>object :{{car}}</p>
-           <a v-bind:href="url">Ninja link</a>
+            <h1 v-bind:title="title">Data Binding in Vue js</h1>
+            <h2 :title="subTitle">{{title}}</h2>
+            <a  v-bind:href="url" target="_blank">Vue Bind Data..</a><br>
+            <a v-bind:href="url">Read more</a> <br>
+            <!-- shortform of v bind directive -->
+            <a :href="url">Learn More About Vue</a>
+
+            <!-- v text directive -->
+            <div v-html="inner">
+            </div>
+            <p v-text="title"></p>
+            <p v-text="subTitle"></p>
+
+            <input v-bind:value="name" type="text" value="Name">
+            
+
+           <h2>{{name}}</h2>
+           <h3 v-html="websiteTag"></h3>
         </div>
         
       
     </div>
     
-
-
     <script src="js/app.js"></script>
 </body>
 
