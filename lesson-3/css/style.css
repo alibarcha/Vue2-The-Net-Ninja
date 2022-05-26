@@ -6,9 +6,11 @@ body{
     width: 70%;
     margin: 40px auto;
     border: 1px solid gray;
-    text-align: center;
     
 }
-span{
-    color: red;
+.head{
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: underline;
+    color: lightgreen;
 }
