@@ -76,6 +76,19 @@
                 </div>
             </div>
 
+            <!------------------ two ways data binding -------------------->
+
+            <p v-bind:title="title">two way data binding.</p>
+            <input v-model="userName" type="text">
+            <span>user Name :: {{userName}}</span>
+                <br><br>
+            <textarea v-model="userMessage" class="form-control" id="" placeholder="Enter Message.." ></textarea><br>
+            <h5>User FeedBack : {{userMessage}}</h5>
+
+            <br>
+            <input v-model="feed" type="number" placeholder="number" class="form-control">
+            <small>{{feed}}</small>
+
 
         </div>
 

@@ -11,7 +11,10 @@ new Vue({
         add:0,
         year:2022,
         x:0,
-        y:0
+        y:0,
+        userName:'',
+        userMessage:'',
+        feed:''
     },
     methods:{
         /*
