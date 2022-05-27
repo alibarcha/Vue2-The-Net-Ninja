@@ -18,28 +18,33 @@
 </head>
 
 <body>
-    <!-- root element -->
-    <div id="vue-app">
-        <!-- data rendering -->
-        <div class="container">
-            <h2 class="head text-danger text-center text-uppercase text-decoration-underline">Punch Bag Game in vue</h2>
-            <!-- bag img -->
-            <div id="bag" v-bind:class="{burst : ended}">
-
-            </div>
-
-            <!-- bag health -->
-            <div id="bag-health">
-                <div v-bind:style="{width:health + '%'}"></div>
-            </div>
-
-            <!-- game control -->
-            <div id="controls">
-                <button class="btn btn-outline-danger" v-on:click="punch" v-shoe="!ended">Punch</button>
-                <button class="btn btn-outline-danger" v-on:click="restart">Restart</button>
+        <!-- root element 1 -->
+        <div id="vue-app1">
+           <div class="container">
+                <h2> vue Instances first</h2>  
+                {{title}}       
+                <p>{{greet}}</p>  
             </div>
         </div>
-    </div>
+
+        <br><hr><hr><br>        
+        <!-- root element 1 -->
+        <div id="vue-app2">
+            <div class="container">
+                 <h2> vue Instances second</h2>   
+                 {{title}}  
+                 <p>{{greet}}</p>  
+                 <button v-on:click="changeTitle()" class="btn btn-outline-success">change titleof instance one</button>    
+             </div>
+         </div>
+
+         <greet></greet>
+
+
+
+
+
+
     <script src="js/app.js"></script>
 </body>
 </html>
