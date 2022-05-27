@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- vue cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Vue js</title>
+</head>
+
+<body>
+    <!-- root element -->
+    <div id="vue-app">
+        <!-- data rendering -->
+        <div class="container">
+            <h1 class="head">computed properties is like method property , used for complex calculations</h1>
+            <button class="btn btn-success" v-on:click="a++">Add to A</button>
+            <button class="btn btn-success" v-on:click="b++">Add to B</button>
+            <br><br>
+            <p>A - {{a}}</p>
+            <p>B - {{b}}</p>
+            <br>
+            <p>age + A ={{addToA}}</p>
+            <p>age + B ={{addToB}}</p>
+
+            <p>User Name : {{fullName}}</p>
+            <h4>{{reverse}}</h4>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
