@@ -22,18 +22,36 @@
     <div id="vue-app">
         <!-- data rendering -->
         <div class="container">
-            <h1 class="head">computed properties is like method property , used for complex calculations</h1>
-            <button class="btn btn-success" v-on:click="a++">Add to A</button>
-            <button class="btn btn-success" v-on:click="b++">Add to B</button>
-            <br><br>
-            <p>A - {{a}}</p>
-            <p>B - {{b}}</p>
-            <br>
-            <p>age + A ={{addToA}}</p>
-            <p>age + B ={{addToB}}</p>
+            <h1 class="head">Dynamic css classes</h1>
 
-            <p>User Name : {{fullName}}</p>
-            <h4>{{reverse}}</h4>
+            <h2 v-bind:class="cls">Dynamic css classes in vue</h2>
+            <h3 v-bind:class="myclass">sub heading of vue</h3>
+            <br><hr><hr><br>
+
+            <!-- <h3>Example one</h3>
+            
+
+            <div  v-bind:class="{available:available}" v-on:click="available=!available">
+                <span>Ryan</span>
+            </div> -->
+
+            <h3>Example two</h3>
+
+            <button class="btn btn-outline-primary" v-on:click="nearby=!nearby">Toggle nearby</button>
+            <button class="btn btn-outline-primary" v-on:click="available=!available">Toggle available</button>
+
+            <div v-bind:class="compClasses">
+                <span>william</span>
+            </div>
+
+            <!-- Array syntax -->
+            <p v-bind:class="['red','font']">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+
+            <small v-bind:class="'red font'">small tag here</small>
+
+
+
+             
         </div>
     </div>
     <script src="js/app.js"></script>
