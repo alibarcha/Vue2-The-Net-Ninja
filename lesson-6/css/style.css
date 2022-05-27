@@ -5,7 +5,7 @@ body{
 .container{
     width: 70%;
     margin: 40px auto;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     
 }
 .head{
@@ -23,26 +23,3 @@ body{
     color: lightgreen;
 }
 
-span{
-    background-color: red;
-    display: inline-block;
-    padding: 10px;
-    color: white;
-    margin: 10px 0;
-}
-
-.available span{
-    background-color: green;
-}
-
-.nearby span:after{
-    content: "nearby";
-    margin-left: 10px;
-}
-
-.font{
-    font-size: 30px;
-}
-.red{
-    color: red;
-}

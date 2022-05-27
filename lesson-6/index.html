@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- vue cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Vue js</title>
+</head>
+
+<body>
+    <!-- root element -->
+    <div id="vue-app">
+        <!-- data rendering -->
+        <div class="container">
+            <h1 class="head">Conditions in vue js || looping</h1>
+
+            <button v-on:click="error=!error" class="btn btn-dark">Tog Error</button>
+            <button v-on:click="success=!success" class="btn btn-dark">Tog Success</button>
+
+            <p v-if="error">Error toggle here</p>
+            <p v-if="success">success toggle here</p>
+                <br><br>
+        <!-- v show -->
+
+        <p v-show="good"> v show in vue js</p>
+
+        <p v-show="bad">Dont show</p>
+
+        <div v-show="true">
+            <h2>wellcome to vue js course</h2>
+        </div>
+
+        <!-- ============= looping in vue :: v-for -->
+        <h3>V-for loop in vue</h3>
+            <!-- array loop -->
+        <ul v-for="skill in skills">
+            <li >{{skill}}</li>
+            
+        </ul>
+        <hr>
+        <!-- object loop -->
+        <ul>
+            <li v-for="(car,index) in cars">{{index}} : {{car}}</li>
+        </ul>
+        <hr>
+        <!-- in box -->
+        <div v-for="(car,index) in cars">
+            <h5>{{index}} :: {{car}}</h5>
+
+        </div>
+
+        <hr>
+        <template >
+            <p v-for="(skill,index) in skills">{{index}} = {{skill}}</p>
+        </template>
+        <hr>
+
+        <div>
+            <h5 v-for="(prop,val) in cars">{{prop}} .. {{val}}</h5>
+        </div>
+
+
+            
+
+
+        
+
+
+          
+
+
+             
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
