@@ -1,6 +1,11 @@
 <template>
     <footer>
         <p><a v-bind:href="link">{{copyright}}</a> </p>
+        <h3>props name :{{name}}</h3>
+        <h5>{{name}}</h5>
+    <ul>
+        <li v-for="user in users" :key="user.name">{{user.name}}</li>
+    </ul>
     </footer>
 
   
@@ -21,14 +26,16 @@ export default {
     },
     computed:{
 
-    }
+    },
+    props:['name','users'],
+  
 
 }
 </script>
 
 <style scoped>
 footer{
-    background-color: #222;
+    background-color: #eee;
     padding: 15px;
 }
 p{
@@ -36,10 +43,10 @@ p{
     text-align: center;
 }
 p a{
-    color: white;
+    color: lightgreen;
 }
 p a:hover{
-    color: lightgreen;
+    color: #222;
 }
 
 </style>

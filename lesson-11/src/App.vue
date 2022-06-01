@@ -1,31 +1,36 @@
 <template>
   <!-- -- root element -- -->
   <div id="app">
-    <app-header></app-header>
-    <!-- <HeaderArea/> -->
-    <NinjaArea/>
-
-    <FooterArea/>
-   
+      <h2>Props in Vue</h2>
+      <!-- props here -->
+    <footer-app name="william son" v-bind:users="users"></footer-app>
+    
   </div>
 </template>
 
 <script>
-import  HeaderArea from "./components/HeaderArea.vue"
-import FooterArea from "./components/FooterArea.vue"
-import NinjaArea from "./components/NinjaArea.vue"
-
-
+import FooterArea from './components/FooterArea.vue'
 
 export default {
   name: "App",
   components: {
-   'app-header': HeaderArea,
-  // HeaderArea,
-  FooterArea,
-  NinjaArea,
-   
+ 'footer-app':FooterArea,  
 },
+ data (){
+   return {
+     title:'vue js',
+     users:[
+       {name:'anil'},
+       {name:'steve'},
+       {name:'elon musk'},
+     ]
+   }
+ },
+ methods:{
+
+ }
+
+
 };
 </script>
 
