@@ -2,9 +2,7 @@
   <!-- -- root element -- -->
   <div id="app">
     
-    <add-blog>
-      dfdk
-    </add-blog>
+    <add-blog></add-blog>
 
    
    
