@@ -2,9 +2,9 @@
   <!-- -- root element -- -->
   <div id="app">
     
-    <add-blog></add-blog>
-
-    <form-two></form-two>
+    
+    <show-blog></show-blog>
+  
 
    
    
@@ -13,14 +13,15 @@
 </template>
 
 <script>
+import ShowBlog from './components/ShowBlog.vue';
 
-import AddBlog from './components/AddBlog.vue'
-import HttpForm from './components/HttpForm.vue'
+
 export default {
   name: "App",
   components: {
-    'add-blog':AddBlog,
-    'form-two':HttpForm,
+    'show-blog':ShowBlog
+   
+    
 
 
 },
