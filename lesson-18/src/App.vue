@@ -4,6 +4,8 @@
     
     <add-blog></add-blog>
 
+    <form-two></form-two>
+
    
    
 
@@ -13,10 +15,12 @@
 <script>
 
 import AddBlog from './components/AddBlog.vue'
+import HttpForm from './components/HttpForm.vue'
 export default {
   name: "App",
   components: {
     'add-blog':AddBlog,
+    'form-two':HttpForm,
 
 
 },

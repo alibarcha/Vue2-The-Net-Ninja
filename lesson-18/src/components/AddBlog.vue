@@ -77,6 +77,7 @@ export default {
     };
   },
   methods: {
+
     post:function (){
       this.$http.post('https://jsonplaceholder.typicode.com/posts',{
 
