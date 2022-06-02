@@ -1,7 +1,7 @@
 <template>
   <!-- -- root element -- -->
   <div id="app">
-      <h2>Props in Vue</h2>
+      <header-app></header-app>
       <!-- props here -->
     <footer-app name="william son" v-bind:users="users"></footer-app>
     
@@ -9,28 +9,23 @@
 </template>
 
 <script>
+import HeaderArea from './components/HeaderArea.vue'
 import FooterArea from './components/FooterArea.vue'
 
 export default {
   name: "App",
   components: {
- 'footer-app':FooterArea,  
+    'header-app':HeaderArea,
+    'footer-app':FooterArea,  
 },
  data (){
    return {
      title:'vue js',
-     users:[
-       {name:'anil'},
-       {name:'steve'},
-       {name:'elon musk'},
-     ]
    }
  },
  methods:{
 
  }
-
-
 };
 </script>
 
@@ -43,6 +38,4 @@ body{
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-
-
 </style>

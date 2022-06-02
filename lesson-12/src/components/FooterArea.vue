@@ -1,11 +1,7 @@
 <template>
     <footer>
         <p><a v-bind:href="link">{{copyright}}</a> </p>
-        <h3>props name :{{name}}</h3>
-        <h5>{{name}}</h5>
-    <ul>
-        <li v-for="user in users" :key="user.name">{{user.name}}</li>
-    </ul>
+        
     </footer>
 
   
@@ -27,7 +23,26 @@ export default {
     computed:{
 
     },
-    props:['name','users'],
+    // life cycle hooks
+    beforeCreate(){
+        alert("before")
+    },
+    created(){
+        alert("created")
+    },
+    beforeMount(){
+        alert("before")
+    },
+    mounted(){
+        alert("mounted")
+    },
+    beforeUpdate(){
+        alert("beforeupdate")
+    },
+    updated(){
+        alert("updated")
+    }
+   
   
 
 }
