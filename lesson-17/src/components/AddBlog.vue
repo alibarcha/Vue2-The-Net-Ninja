@@ -6,7 +6,7 @@
       <input v-model="title" type="text" required />
       <!-- <input v-model.lazy="title"  type="text" required> -->
       <label for="">Blog Content</label>
-      <textarea v-model="content" name="" id=""></textarea>
+      <textarea v-model="content" name="" id="" required></textarea>
       <!-- <textarea v-model.lazy="content" name="" id=""></textarea> -->
       <label for="">Check IT !</label>
       <input v-model="check" type="checkbox" />
@@ -40,6 +40,7 @@
       <select v-model="blog.authors">
         <option v-for="author in authors" :key="author">{{ author }}</option>
       </select>
+      <button v-on:click.prevent="post">Add Blog</button>
     </form>
     <div id="preview">
       <h3>Preview Blog</h3>
@@ -75,7 +76,20 @@ export default {
       authors: ["The Net Ninja", "code with harry", "The vue instance"],
     };
   },
-  methods: {},
+  methods: {
+    post:function (){
+      this.$http.post('https://jsonplaceholder.typicode.com/posts',{
+
+          title:this.title,
+          body:this.content,
+          userId:1
+      }).then(function(data){
+        console.log(data)
+        alert("form submited")
+        
+      })
+    }
+  },
 };
 </script>
 
@@ -131,5 +145,18 @@ option{
     padding: 20px;
     text-align: center;
     
+}
+button{
+  display: block;
+  padding: 9px;
+  text-transform: uppercase;
+  margin: 19px 0;
+  background: lightgreen;
+  border: 1px solid #222;
+  cursor: pointer;
+}
+button:hover{
+  background: #222;
+  color: white;
 }
 </style>
