@@ -1,35 +1,35 @@
 <template>
   <!-- -- root element -- -->
   <div id="app">
-      <h2>Props in Vue</h2>
-      <!-- props here -->
-    <footer-app name="william son" v-bind:users="users"></footer-app>
     
+    
+    <show-blog></show-blog>
+  
+
+   
+   
+
   </div>
 </template>
 
 <script>
-import FooterArea from './components/FooterArea.vue'
+import ShowBlog from './components/ShowBlog.vue';
+
 
 export default {
   name: "App",
   components: {
- 'footer-app':FooterArea,  
+    'show-blog':ShowBlog
+   
+    
+
+
 },
- data (){
+ data(){
    return {
-     title:'vue js',
-     users:[
-       {name:'anil'},
-       {name:'steve'},
-       {name:'elon musk'},
-     ]
+     
    }
- },
- methods:{
-
  }
-
 
 };
 </script>
@@ -43,6 +43,5 @@ body{
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-
 
 </style>
