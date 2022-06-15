@@ -1,10 +1,10 @@
 <template>
     <div  id="show-blog">
         <h1>All Blog Articles</h1>
-        <div v-theme='wide' v-for="blog in blogs"  :key="blog.id" class="single-blog">
+        <div v-for="blog in blogs"  :key="blog.id" class="single-blog">
             <!-- custom directive -->
-            <h2 v-rainbow>{{blog.title}}</h2>
-            <article v-randomColor>{{blog.body}}</article>
+            <h2>{{blog.title}}</h2>
+            <article>{{blog.body}}</article>
             <small>{{blog.id}}</small>
         </div>
     </div>
