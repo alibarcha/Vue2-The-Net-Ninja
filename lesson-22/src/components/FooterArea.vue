@@ -13,7 +13,7 @@ export default {
     data (){
         return {
             copyright:'Copyright 2022 The Net Ninja',
-            link:'https://www.youtube.com/watch?v=6-us2D7GQCk&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa&index=24',
+            link:'#',
 
         }
     },
@@ -24,24 +24,24 @@ export default {
 
     },
     // life cycle hooks
-    beforeCreate(){
-        alert("before")
-    },
-    created(){
-        alert("created")
-    },
-    beforeMount(){
-        alert("before")
-    },
-    mounted(){
-        alert("mounted")
-    },
-    beforeUpdate(){
-        alert("beforeupdate")
-    },
-    updated(){
-        alert("updated")
-    }
+    // beforeCreate(){
+    //     alert("before")
+    // },
+    // created(){
+    //     alert("created")
+    // },
+    // beforeMount(){
+    //     alert("before")
+    // },
+    // mounted(){
+    //     alert("mounted")
+    // },
+    // beforeUpdate(){
+    //     alert("beforeupdate")
+    // },
+    // updated(){
+    //     alert("updated")
+    // }
    
   
 
@@ -50,7 +50,7 @@ export default {
 
 <style scoped>
 footer{
-    background-color: #eee;
+    background-color: #222;
     padding: 15px;
 }
 p{
@@ -61,7 +61,7 @@ p a{
     color: lightgreen;
 }
 p a:hover{
-    color: #222;
+    color: white;
 }
 
 </style>

@@ -3,6 +3,7 @@
   <div id="app">
    <HeaderArea/>
    <router-view></router-view>
+   <FooterArea/>
     
   
 
@@ -12,12 +13,14 @@
 <script>
 
 import HeaderArea from './components/HeaderArea.vue'
+import FooterArea from './components/FooterArea.vue'
 
 
 export default {
   name: "App",
   components: {
-    HeaderArea
+    HeaderArea,
+    FooterArea
    
   
 },
