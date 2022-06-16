@@ -5,7 +5,8 @@
        
         <div v-for="blog in filterBlogs"  :key="blog.id" class="single-blog">
             <!-- custom directive -->
-            <h2 v-rainbow>{{blog.title |upper}}</h2>
+            <router-link to="'/blog/'+ blog.id"><h2 v-rainbow>{{blog.title |upper}}</h2></router-link>
+            
             <article v-color>{{blog.body | snippet}}</article>
             <small>{{blog.id}}</small>
         </div>
