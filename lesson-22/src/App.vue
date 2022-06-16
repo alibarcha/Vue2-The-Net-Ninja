@@ -1,8 +1,9 @@
 <template>
   <!-- -- root element -- -->
   <div id="app">
+   <HeaderArea/>
+   <router-view></router-view>
     
-    <router-view></router-view>
   
 
   </div>
@@ -10,14 +11,14 @@
 
 <script>
 
-import ShowBlog from './components/ShowBlog.vue'
-import AddBlog from './components/AddBlog.vue'
+import HeaderArea from './components/HeaderArea.vue'
+
 
 export default {
   name: "App",
   components: {
-    ShowBlog,
-    AddBlog
+    HeaderArea
+   
   
 },
  data(){

@@ -1,8 +1,12 @@
 <template>
     <header>
-        <small>Events in vue</small>
-       <h2 >Title:{{title}}</h2> 
-        <button id="btn" v-on:click="changeTitle">Change title</button>
+        <nav>
+            <ul>
+                <li><router-link to="/">Show Blog</router-link></li>
+                <li><router-link to="/add">Add Blog</router-link></li>
+            </ul>
+        </nav>
+
     </header>
    
   
@@ -13,13 +17,11 @@ export default {
     name:'HeaderArea',
     data (){
         return {
-            title: 'Vue Net Ninjas'
+            
         }
     },
     methods:{
-        changeTitle: function (){
-            this.title="The Net Ninja Vue"
-        }
+     
 
     },
     computed:{
@@ -33,24 +35,33 @@ export default {
 header{
     background: lightgreen;
     padding: 16px;
+    display: flex;
+    justify-content: center;
 }
-h2{
-    color: #222;
-    text-align: center;
+ul{
+    list-style: none;
+    display: flex;
+    
 }
-#btn{
-    text-transform: capitalize;
-    color: #222;
+ul li{
+    font-size: 15px;
+    font-weight: bold;
+    padding:0 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+ul a{
+    text-decoration: none;
+
+}
+.router-link-exact-active{
     background: white;
-    border:none;
-    border-radius: 5px;
-    padding: 9px ;
-    font-size: 18px;
+    padding: 10px;
+    border-radius: 30px;
+    
 }
-#btn:hover{
-    background: #222;
-    color: lightgreen;
-}
+
+
 
 
 </style>
