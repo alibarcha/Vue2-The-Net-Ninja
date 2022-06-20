@@ -10,11 +10,12 @@ export default {
     name:'SingleBlog',
     data(){
         return {
-            id:this.$route.params.id
+            id:this.$route.params.id,
+            blog:{}
         }
     },
     created(){ 
-        this.$http.get('https://jsonplaceholder.typicode.com/posts' + this.id).then(function(data){
+        this.$http.get('https://jsonplaceholder.typicode.com/posts/' + this.id).then(function(data){
             this.blog=data.body;
         })
 
@@ -23,6 +24,14 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+ #singleBlog{
+      width: 60%;
+    background: #eee;
+    padding: 10px 20px;
+    margin: auto;
+    text-align: center;
+
+ }
 
 </style>
