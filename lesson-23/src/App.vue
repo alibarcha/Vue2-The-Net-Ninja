@@ -5,8 +5,6 @@
    <router-view></router-view>
    <FooterArea/>
     
-  
-
   </div>
 </template>
 
@@ -22,7 +20,6 @@ export default {
     HeaderArea,
     FooterArea
    
-  
 },
  data(){
    return {

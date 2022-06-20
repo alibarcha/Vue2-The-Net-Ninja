@@ -54,7 +54,6 @@
           {{ category }}
         </li>
       </ul>
-
       <!-- select binding -->
       <p>Author : {{ blog.authors }}</p>
     </div>
