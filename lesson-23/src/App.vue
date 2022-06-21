@@ -20,7 +20,6 @@ export default {
     HeaderArea,
     FooterArea
    
-  
 },
  data(){
    return {
