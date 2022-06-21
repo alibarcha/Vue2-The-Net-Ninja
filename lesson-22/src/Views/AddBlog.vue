@@ -1,13 +1,13 @@
 <template>
   <div id="add-blog">
     <h1>Add a New Blog Post</h1>
-    <form action="">
+    <form v-if="! submitted">
       <label for="">Blog Title</label>
-      <input v-model="title" type="text" required />
+      <input v-model.lazy="blog.title" type="text" name="title" required />
       <!-- <input v-model.lazy="title"  type="text" required> -->
       <label for="">Blog Content</label>
-      <textarea v-model="content" name="" id="" required></textarea>
-      <!-- <textarea v-model.lazy="content" name="" id=""></textarea> -->
+      <!-- <textarea v-model="content" name="content" id="" required></textarea> -->
+      <textarea v-model.lazy.trim="blog.content" name="" id=""></textarea>
       <label for="">Check IT !</label>
       <input v-model="check" type="checkbox" />
       <br />
@@ -44,8 +44,8 @@
     </form>
     <div id="preview">
       <h3>Preview Blog</h3>
-      <p>Blog title : {{ title }}</p>
-      <p>Blog content :{{ content }}</p>
+      <p>Blog title : {{ blog.title }}</p>
+      <p>Blog content :{{ blog.content }}</p>
       <p>Checkout : {{ check }}</p>
 
       <!-- categories -->
@@ -66,31 +66,29 @@ export default {
   name: "AddBlog",
   data() {
     return {
-      title: "",
-      content: "",
-      check: false,
+     
       blog: {
+        check: false,
+         title:'',
+          content:'',
         categories: [],
         authors: "",
       },
       authors: ["The Net Ninja", "code with harry", "The vue instance"],
-    };
+      submitted:false,
+    }
   },
   methods: {
 
     post:function (){
-      this.$http.post('https://jsonplaceholder.typicode.com/posts',{
-
-          title:this.title,
-          body:this.content,
-          userId:1
-      }).then(function(data){
+      this.$http.post('https://my-vue-app-3ca31-default-rtdb.firebaseio.com/posts.json',this.blog).then(function(data){
         console.log(data)
-        alert("form submited")
+        // alert("form submited")
+        this.submitted=true
         
       })
     }
-  },
+  }
 };
 </script>
 
