@@ -5,8 +5,6 @@
    <router-view></router-view>
    <FooterArea/>
     
-  
-
   </div>
 </template>
 
