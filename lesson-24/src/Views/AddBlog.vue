@@ -66,8 +66,8 @@ export default {
   data() {
     return {
      
+      check: false,
       blog: {
-        check: false,
          title:'',
           content:'',
         categories: [],

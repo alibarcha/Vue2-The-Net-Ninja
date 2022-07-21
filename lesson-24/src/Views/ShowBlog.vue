@@ -3,12 +3,12 @@
         <h1>All Blog Articles </h1>
         <input type="text" placeholder="Search Blog" v-model="search">
        
-        <div v-for="blog in filterBlogs"  :key="blog.id" class="single-blog">
+        <div v-for="blog in filteredBlogs"  :key="blog.id" class="single-blog">
             <!-- custom directive -->
-            <router-link v-bind:to="'/blog/'+ blog.id"><h2 v-rainbow>{{blog.title |upper}}</h2></router-link>
+            <router-link v-bind:to="'/blog/'+ blog.id"><h2 v-rainbow>{{blog.title}}</h2></router-link>
             
-            <article v-color>{{blog.body | snippet}}</article>
-            <small>{{blog.id}}</small>
+            <article v-color>{{blog.content}}</article>
+            
         </div>
     </div>
 </template>
@@ -27,14 +27,24 @@ export default {
 
     },
     created(){
-        this.$http.get('https://jsonplaceholder.typicode.com/posts').then(function(data){
-          this.blogs=data.body.slice(0,30)
-            // console.log(data)
+        this.$http.get('https://my-vue-app-3ca31-default-rtdb.firebaseio.com/posts.json').then(function(data){
+           return data.json();
            
+        }).then(function(data){
+            var blogsArray=[];
+            for(let key in data){
+                data[key].id=key;
+                blogsArray.push(data[key])
+
+            }
+            this.blogs=blogsArray;
+
         })
+
+        
     },
     computed:{
-        filterBlogs:function(){
+        filteredBlogs:function(){
             return this.blogs.filter((blog)=>{
                 return blog.title.match(this.search)
             })
